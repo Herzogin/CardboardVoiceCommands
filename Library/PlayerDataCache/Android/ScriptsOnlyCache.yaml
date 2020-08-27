@@ -2,11 +2,12 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - ClickHandler
+    - ControllerVoice
     - GvrEditorEmulator
     - GvrPointerInputModule
     - GvrPointerPhysicsRaycaster
     - GvrReticlePointer
-    - ObjectBehavior
+    - ObjectBehavior2
     - TextSpeech.SpeechToText
     - TextSpeech.TextToSpeech
     - VoiceController
@@ -41,6 +42,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 81
@@ -50,41 +53,43 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9470}
+      Script: {instanceID: 9500}
     - Class: 114
-      Script: {instanceID: 9476}
+      Script: {instanceID: 9506}
     - Class: 114
-      Script: {instanceID: 9478}
+      Script: {instanceID: 9508}
     - Class: 114
-      Script: {instanceID: 9482}
+      Script: {instanceID: 9512}
     - Class: 114
-      Script: {instanceID: 9490}
+      Script: {instanceID: 9520}
     - Class: 114
-      Script: {instanceID: 9526}
+      Script: {instanceID: 9556}
     - Class: 114
-      Script: {instanceID: 9528}
+      Script: {instanceID: 9558}
     - Class: 114
-      Script: {instanceID: 9606}
+      Script: {instanceID: 9636}
     - Class: 114
-      Script: {instanceID: 9740}
+      Script: {instanceID: 9770}
     - Class: 114
-      Script: {instanceID: 10134}
+      Script: {instanceID: 10118}
     - Class: 114
-      Script: {instanceID: 10380}
+      Script: {instanceID: 10176}
     - Class: 114
-      Script: {instanceID: 10456}
+      Script: {instanceID: 10426}
     - Class: 114
-      Script: {instanceID: 10644}
+      Script: {instanceID: 10504}
     - Class: 114
-      Script: {instanceID: 10672}
+      Script: {instanceID: 10692}
     - Class: 114
-      Script: {instanceID: 10748}
+      Script: {instanceID: 10720}
     - Class: 114
-      Script: {instanceID: 10788}
+      Script: {instanceID: 10796}
     - Class: 114
-      Script: {instanceID: 13272}
+      Script: {instanceID: 10836}
     - Class: 114
-      Script: {instanceID: 15876}
+      Script: {instanceID: 14564}
+    - Class: 114
+      Script: {instanceID: 21238}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -702,6 +707,12 @@ ScriptsOnlyBuild:
     className: DemoSeeThroughController
   - hash:
       serializedVersion: 2
+      Hash: b5d01a44c9a694c6b9bce4626dd0a12e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: VoiceController2
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -1050,22 +1061,28 @@ ScriptsOnlyBuild:
     className: RotateAnim
   - hash:
       serializedVersion: 2
-      Hash: c3d3430df9e3ea95e3e3d587961390fb
-    assemblyName: Unity.Timeline.dll
-    namespaceName: UnityEngine.Timeline
-    className: PlayableTrack
-  - hash:
-      serializedVersion: 2
       Hash: ff01e8705b252568c22eef689299744f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ObjectBehavior
   - hash:
       serializedVersion: 2
+      Hash: c3d3430df9e3ea95e3e3d587961390fb
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 50470e2ffeae7526b8f387d348354329
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ControllerVoice
+  - hash:
+      serializedVersion: 2
       Hash: b5d01a44c9a694c6b9bce4626dd0a12e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: VoiceController2
+    className: ObjectBehavior2
   platform: 13
   scenePathNames:
   - Assets/Main.unity
