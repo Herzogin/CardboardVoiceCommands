@@ -13,6 +13,8 @@ public class ObjectBehavior2 : MonoBehaviour
 	const string LANG_CODE = "en-US";
 	[SerializeField]
 	Text uiText;
+	[SerializeField]
+	GameObject obj;
 
 	// Use this for initialization
 	void Start()
@@ -56,14 +58,14 @@ public class ObjectBehavior2 : MonoBehaviour
 		if (result.Equals("down"))
 		{
 			uiText.text = "runter";
-			GetComponent<Rigidbody>().useGravity = true;
+			obj.GetComponent<Rigidbody>().useGravity = true;
 		}
 		else if (Equals(result, "small"))
 		{
 			uiText.text = "kleiner";
-			transform.localScale = new Vector3(1, 1, 1);
+			obj.transform.localScale = new Vector3(1, 1, 1);
 		}
-	}
+	} 
 	private void OnPointerEnter(PointerEventData data)
 	{
 		m_targeted = true;
