@@ -1,12 +1,14 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - GvrControllerInput
     - GvrEditorEmulator
     - GvrPointerInputModule
     - GvrPointerPhysicsRaycaster
     - GvrReticlePointer
     - TextSpeech.SpeechToText
     - VoiceAndGazeControl
+    - WalkWithVoice
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
@@ -39,6 +41,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 104
@@ -46,46 +50,64 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9502}
+      Script: {instanceID: 9500}
+    - Class: 114
+      Script: {instanceID: 9506}
     - Class: 114
       Script: {instanceID: 9508}
     - Class: 114
-      Script: {instanceID: 9510}
+      Script: {instanceID: 9512}
     - Class: 114
-      Script: {instanceID: 9514}
+      Script: {instanceID: 9520}
     - Class: 114
-      Script: {instanceID: 9522}
+      Script: {instanceID: 9556}
     - Class: 114
       Script: {instanceID: 9558}
     - Class: 114
-      Script: {instanceID: 9560}
+      Script: {instanceID: 9636}
     - Class: 114
-      Script: {instanceID: 9638}
+      Script: {instanceID: 9770}
     - Class: 114
-      Script: {instanceID: 9774}
+      Script: {instanceID: 10132}
     - Class: 114
-      Script: {instanceID: 10136}
+      Script: {instanceID: 10428}
     - Class: 114
-      Script: {instanceID: 10432}
+      Script: {instanceID: 10506}
     - Class: 114
-      Script: {instanceID: 10510}
+      Script: {instanceID: 10796}
     - Class: 114
-      Script: {instanceID: 10804}
+      Script: {instanceID: 10836}
     - Class: 114
-      Script: {instanceID: 10844}
+      Script: {instanceID: 10880}
+    - Class: 114
+      Script: {instanceID: 12396}
+    - Class: 114
+      Script: {instanceID: 17312}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
+    - Class: 134
+      Script: {instanceID: 0}
     - Class: 135
       Script: {instanceID: 0}
+    - Class: 143
+      Script: {instanceID: 0}
+    - Class: 154
+      Script: {instanceID: 0}
+    - Class: 156
+      Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 218
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 1953259897
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -654,6 +676,12 @@ ScriptsOnlyBuild:
     className: ControlTrack
   - hash:
       serializedVersion: 2
+      Hash: ff01e8705b252568c22eef689299744f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ObjectBehavior
+  - hash:
+      serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -1044,10 +1072,34 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: ff01e8705b252568c22eef689299744f
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: ObjectBehavior
+    className: VRLookWalk
+  - hash:
+      serializedVersion: 2
+      Hash: 1ff003eb4e8173d10ec686f52dff384f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: VRAutoWalkLookDown
+  - hash:
+      serializedVersion: 2
+      Hash: 497dc427ff08631ed34209e5f5304319
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: VRLookWalkKeyboard
+  - hash:
+      serializedVersion: 2
+      Hash: 1ff003eb4e8173d10ec686f52dff384f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: VRLookWalkMagneticClick
+  - hash:
+      serializedVersion: 2
+      Hash: 1ff003eb4e8173d10ec686f52dff384f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WalkWithVoice
   platform: 13
   scenePathNames:
   - Assets/Main.unity
