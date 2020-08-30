@@ -11,8 +11,6 @@ public class VoiceAndGazeControl : MonoBehaviour
     bool gazedAt = false;
     const string LANG_CODE = "en-US";
     [SerializeField]
-    Text textfield;
-    [SerializeField]
     GameObject affectedGameObject;
 
     void Start()
@@ -49,17 +47,14 @@ public class VoiceAndGazeControl : MonoBehaviour
     {
         if (result.Equals("down"))
         {
-            textfield.text = "runter";
             affectedGameObject.GetComponent<Rigidbody>().useGravity = true;
         }
         else if (Equals(result, "small"))
         {
-            textfield.text = "kleiner";
             affectedGameObject.transform.localScale = new Vector3(1, 1, 1);
         }
         else if (Equals(result, "big"))
         {
-            textfield.text = "bigger";
             Vector3 newScale = transform.localScale;
             //newScale *= 1.2f;
             newScale *= 1.5f;

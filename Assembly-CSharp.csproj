@@ -187,9 +187,14 @@
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\Internal\GvrCursorHelper.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\Internal\SuppressMemoryAllocationErrorAttribute.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
-    <Compile Include="Assets\Scripts\developmentScripts\ObjectBehavior.cs" />
-    <Compile Include="Assets\Scripts\developmentScripts\VoiceController.cs" />
+    <Compile Include="Assets\Scripts\developmentScripts\Objects\ObjectBehavior.cs" />
+    <Compile Include="Assets\Scripts\developmentScripts\Objects\VoiceController.cs" />
+    <Compile Include="Assets\Scripts\developmentScripts\Walking\VRAutoWalkLookDown.cs" />
+    <Compile Include="Assets\Scripts\developmentScripts\Walking\VRLookWalk.cs" />
+    <Compile Include="Assets\Scripts\developmentScripts\Walking\VRLookWalkKeyboard.cs" />
+    <Compile Include="Assets\Scripts\developmentScripts\Walking\VRLookWalkMagneticClick.cs" />
     <Compile Include="Assets\Scripts\VoiceAndGazeControl.cs" />
+    <Compile Include="Assets\Scripts\WalkWithVoice.cs" />
     <Compile Include="Assets\SpeechAndText\Sample\AndroidDebug.cs" />
     <Compile Include="Assets\SpeechAndText\Sample\RotateAnim.cs" />
     <Compile Include="Assets\SpeechAndText\Sample\SampleSpeechToText.cs" />
@@ -202,6 +207,7 @@
     <None Include="Assets\GoogleVR\Shaders\GvrUnlitTransparentOverlay.shader" />
     <None Include="Assets\GoogleVR\Beta\Shaders\GvrSeeThroughUI.shader" />
     <None Include="Assets\GoogleVR\Shaders\GvrUnlitTransparentOverlayColor.shader" />
+    <None Include="Assets\Ground materials FD\Information package.txt" />
     <None Include="Assets\GoogleVR\Plugins\Android\AndroidManifest-6DOF.xml" />
     <None Include="Assets\GoogleVR\Shaders\Video\VideoUnlitShader.shader" />
     <None Include="Assets\GoogleVR\Shaders\GvrUnlitTextureOverlay.shader" />
