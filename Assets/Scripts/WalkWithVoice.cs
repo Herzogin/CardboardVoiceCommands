@@ -8,7 +8,7 @@ public class WalkWithVoice : MonoBehaviour
     public Transform cameraTransform;
     public float toggleAngle = 10.0F;
     public float speed = 3.0F;
-    public bool moveForward = true;
+    public bool moveForward = false;
     const string LANG_CODE = "en-US";
     private CharacterController characterController;
 

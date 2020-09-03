@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - GvrPointerInputModule
     - GvrPointerPhysicsRaycaster
     - GvrReticlePointer
+    - LabelMe
     - TextSpeech.SpeechToText
     - VoiceAndGazeControl
     - WalkWithVoice
@@ -43,6 +44,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 104
@@ -50,39 +53,41 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9500}
-    - Class: 114
-      Script: {instanceID: 9506}
+      Script: {instanceID: 9502}
     - Class: 114
       Script: {instanceID: 9508}
     - Class: 114
-      Script: {instanceID: 9512}
+      Script: {instanceID: 9510}
     - Class: 114
-      Script: {instanceID: 9520}
+      Script: {instanceID: 9514}
     - Class: 114
-      Script: {instanceID: 9556}
+      Script: {instanceID: 9522}
     - Class: 114
       Script: {instanceID: 9558}
     - Class: 114
-      Script: {instanceID: 9636}
+      Script: {instanceID: 9560}
     - Class: 114
-      Script: {instanceID: 9770}
+      Script: {instanceID: 9638}
     - Class: 114
-      Script: {instanceID: 10132}
+      Script: {instanceID: 9772}
     - Class: 114
-      Script: {instanceID: 10428}
+      Script: {instanceID: 10136}
     - Class: 114
-      Script: {instanceID: 10506}
+      Script: {instanceID: 10436}
     - Class: 114
-      Script: {instanceID: 10796}
+      Script: {instanceID: 10514}
     - Class: 114
-      Script: {instanceID: 10836}
+      Script: {instanceID: 10806}
     - Class: 114
-      Script: {instanceID: 10880}
+      Script: {instanceID: 10846}
     - Class: 114
-      Script: {instanceID: 12396}
+      Script: {instanceID: 10848}
     - Class: 114
-      Script: {instanceID: 17312}
+      Script: {instanceID: 10892}
+    - Class: 114
+      Script: {instanceID: 12440}
+    - Class: 114
+      Script: {instanceID: 12544}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -98,6 +103,10 @@ ScriptsOnlyBuild:
     - Class: 156
       Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
     - Class: 218
       Script: {instanceID: 0}
@@ -170,6 +179,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GvrVideoPlayerTexture
+  - hash:
+      serializedVersion: 2
+      Hash: 2aa29de6a1dc3453546c646e13cc4b51
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WalkToObject
   - hash:
       serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
@@ -664,6 +679,12 @@ ScriptsOnlyBuild:
     className: ControlPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 497dc427ff08631ed34209e5f5304319
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: VRLookWalkKeyboard
+  - hash:
+      serializedVersion: 2
       Hash: b8a5e8091ab0b8861d2add371082c5e0
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -724,7 +745,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
-      Hash: c3257a86fe4258a6fe7592639fa9fde7
+      Hash: 3767c4973260e5bd9cbd68ff4f80404d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: VoiceAndGazeControl
@@ -812,6 +833,18 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GvrControllerTooltipsSimple
+  - hash:
+      serializedVersion: 2
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: VRLookWalk
+  - hash:
+      serializedVersion: 2
+      Hash: 1ff003eb4e8173d10ec686f52dff384f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: VRLookWalkMagneticClick
   - hash:
       serializedVersion: 2
       Hash: 88cc9df3c6fc697bfbeacd24c0d6f2d7
@@ -934,6 +967,12 @@ ScriptsOnlyBuild:
     className: ScrubberEvents
   - hash:
       serializedVersion: 2
+      Hash: 1ff003eb4e8173d10ec686f52dff384f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: VRAutoWalkLookDown
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -998,6 +1037,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_ColorGradient
+  - hash:
+      serializedVersion: 2
+      Hash: 1ff003eb4e8173d10ec686f52dff384f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WalkWithVoice
   - hash:
       serializedVersion: 2
       Hash: f0077b931a26a7eeaf5e245c7ef51ec4
@@ -1072,34 +1117,10 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+      Hash: b5d01a44c9a694c6b9bce4626dd0a12e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: VRLookWalk
-  - hash:
-      serializedVersion: 2
-      Hash: 1ff003eb4e8173d10ec686f52dff384f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: VRAutoWalkLookDown
-  - hash:
-      serializedVersion: 2
-      Hash: 497dc427ff08631ed34209e5f5304319
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: VRLookWalkKeyboard
-  - hash:
-      serializedVersion: 2
-      Hash: 1ff003eb4e8173d10ec686f52dff384f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: VRLookWalkMagneticClick
-  - hash:
-      serializedVersion: 2
-      Hash: 1ff003eb4e8173d10ec686f52dff384f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: WalkWithVoice
+    className: LabelMe
   platform: 13
   scenePathNames:
   - Assets/Main.unity
