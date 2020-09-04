@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 using TextSpeech;
-using UnityEngine.UI;
 using UnityEngine.Android;
 
 [RequireComponent(typeof(EventTrigger))]

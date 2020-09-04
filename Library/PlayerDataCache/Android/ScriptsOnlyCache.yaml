@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - DistiguishByVoice
     - GvrControllerInput
     - GvrEditorEmulator
     - GvrPointerInputModule
@@ -73,21 +74,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10136}
     - Class: 114
-      Script: {instanceID: 10436}
+      Script: {instanceID: 10166}
     - Class: 114
-      Script: {instanceID: 10514}
+      Script: {instanceID: 10438}
     - Class: 114
-      Script: {instanceID: 10806}
+      Script: {instanceID: 10516}
     - Class: 114
-      Script: {instanceID: 10846}
+      Script: {instanceID: 10808}
     - Class: 114
       Script: {instanceID: 10848}
     - Class: 114
-      Script: {instanceID: 10892}
+      Script: {instanceID: 10850}
     - Class: 114
-      Script: {instanceID: 12440}
+      Script: {instanceID: 10894}
     - Class: 114
-      Script: {instanceID: 12544}
+      Script: {instanceID: 12474}
+    - Class: 114
+      Script: {instanceID: 12708}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -95,6 +98,8 @@ ScriptsOnlyBuild:
     - Class: 134
       Script: {instanceID: 0}
     - Class: 135
+      Script: {instanceID: 0}
+    - Class: 136
       Script: {instanceID: 0}
     - Class: 143
       Script: {instanceID: 0}
@@ -757,6 +762,12 @@ ScriptsOnlyBuild:
     className: GvrTrackedController
   - hash:
       serializedVersion: 2
+      Hash: b5d01a44c9a694c6b9bce4626dd0a12e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LabelMe
+  - hash:
+      serializedVersion: 2
       Hash: 1f8286dbbba9b39b9120dec32b8944e4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1117,10 +1128,10 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: b5d01a44c9a694c6b9bce4626dd0a12e
+      Hash: a5818fa70da6bf0f7e619539e25f5942
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: LabelMe
+    className: DistiguishByVoice
   platform: 13
   scenePathNames:
   - Assets/Main.unity

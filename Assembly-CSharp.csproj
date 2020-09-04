@@ -194,6 +194,7 @@
     <Compile Include="Assets\Scripts\developmentScripts\Walking\VRLookWalkKeyboard.cs" />
     <Compile Include="Assets\Scripts\developmentScripts\Walking\VRLookWalkMagneticClick.cs" />
     <Compile Include="Assets\Scripts\developmentScripts\Walking\WalkToObject.cs" />
+    <Compile Include="Assets\Scripts\DistiguishByVoice.cs" />
     <Compile Include="Assets\Scripts\LabelMe.cs" />
     <Compile Include="Assets\Scripts\VoiceAndGazeControl.cs" />
     <Compile Include="Assets\Scripts\WalkWithVoice.cs" />
