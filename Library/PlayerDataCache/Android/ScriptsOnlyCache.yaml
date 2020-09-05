@@ -11,8 +11,6 @@ ScriptsOnlyBuild:
     - TextSpeech.SpeechToText
     - VoiceAndGazeControl
     - WalkWithVoice
-    UnityEditor.TestRunner.dll:
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.EventTrigger
@@ -76,21 +74,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10166}
     - Class: 114
-      Script: {instanceID: 10438}
+      Script: {instanceID: 10398}
     - Class: 114
-      Script: {instanceID: 10516}
+      Script: {instanceID: 10440}
     - Class: 114
-      Script: {instanceID: 10808}
+      Script: {instanceID: 10518}
     - Class: 114
-      Script: {instanceID: 10848}
+      Script: {instanceID: 10810}
     - Class: 114
       Script: {instanceID: 10850}
     - Class: 114
-      Script: {instanceID: 10894}
+      Script: {instanceID: 10852}
     - Class: 114
-      Script: {instanceID: 12474}
+      Script: {instanceID: 10896}
     - Class: 114
-      Script: {instanceID: 12708}
+      Script: {instanceID: 12648}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -894,6 +892,12 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
+      Hash: a5818fa70da6bf0f7e619539e25f5942
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DistiguishByVoice
+  - hash:
+      serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1126,13 +1130,7 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: a5818fa70da6bf0f7e619539e25f5942
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: DistiguishByVoice
   platform: 13
   scenePathNames:
   - Assets/Main.unity
-  playerPath: C:/Users/N/Desktop/voiceText/voiceText.apk
+  playerPath: C:/Users/N/Desktop/CardboardVoiceCommands/CardboardVoice.apk

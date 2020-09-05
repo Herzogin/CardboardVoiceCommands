@@ -10,12 +10,12 @@ public class DistiguishByVoice : MonoBehaviour
 {
     bool gazedAt = false;
     const string LANG_CODE = "en-US";
-    //public GameObject statue;
     public GameObject statueGroup;
     public GameObject player;
-    int farthest;
     Transform farthestStatue;
     Transform nearestStatue;
+    Transform rightStatue;
+    Transform leftStatue;
     [SerializeField]
     Text uiText;
 
@@ -55,22 +55,30 @@ public class DistiguishByVoice : MonoBehaviour
 
     void OnFinalSpeechResult(string result)
     {   uiText.text = result;
-        if (result.Equals("blue"))
+        if (result.Equals("far"))
         {
             farthestStatue.transform.GetChild(1).gameObject.SetActive(false);
         }
-        else if (result.Equals("yellow"))
+        else if (result.Equals("near"))
         {
              nearestStatue.transform.GetChild(1).gameObject.SetActive(false);
         }
-        //else if (result.Equals("delete right"))
-        //{
-        //    //
-        //}
-        //else if (result.Equals("delete left"))
-        //{
-        //    //
-        //}
+        else if (result.Equals("right"))
+        {
+            rightStatue.transform.GetChild(1).gameObject.SetActive(false);
+        }
+        else if (result.Equals("left"))
+        {
+            leftStatue.transform.GetChild(1).gameObject.SetActive(false);
+        }
+        else if (result.Equals("delete"))
+        {
+            statueGroup.transform.GetChild(0).transform.GetChild(1).gameObject.SetActive(false);
+            statueGroup.transform.GetChild(1).transform.GetChild(1).gameObject.SetActive(false);
+            statueGroup.transform.GetChild(2).transform.GetChild(1).gameObject.SetActive(false);
+            statueGroup.transform.GetChild(3).transform.GetChild(1).gameObject.SetActive(false);
+            statueGroup.transform.GetChild(4).transform.GetChild(1).gameObject.SetActive(false);
+        }
     }
 
     private void ReticlePointerEnters(PointerEventData data)
@@ -108,32 +116,58 @@ public class DistiguishByVoice : MonoBehaviour
 
     private void getStatuePositions()
     {
+        //gets the separate statues out off the StatueGroup
         Transform statue0 = statueGroup.transform.GetChild(0);
         Transform statue1 = statueGroup.transform.GetChild(1);
         Transform statue2 = statueGroup.transform.GetChild(2);
         Transform statue3 = statueGroup.transform.GetChild(3);
         Transform statue4 = statueGroup.transform.GetChild(4);
 
+        #region get nearest and farthest statue
 
-
+        //distance to player
         float dist0 = Vector3.Distance(statue0.position, player.transform.position);
         float dist1 = Vector3.Distance(statue1.position, player.transform.position);
         float dist2 = Vector3.Distance(statue2.position, player.transform.position);
         float dist3 = Vector3.Distance(statue3.position, player.transform.position);
         float dist4 = Vector3.Distance(statue4.position, player.transform.position);
 
-        float[] array = new float[] { dist0, dist1, dist2, dist3, dist4 };
-
+        float[] distanceArray = new float[] { dist0, dist1, dist2, dist3, dist4 };
 
         // Finding maximum
-        float m = array.Max();
-        farthest = Array.IndexOf(array, m);
+        float m = distanceArray.Max();
+        int farthest = Array.IndexOf(distanceArray, m);
         farthestStatue = statueGroup.transform.GetChild(farthest);
 
         //Finding minimum
-        float n = array.Min();
-        int nearest = Array.IndexOf(array, n);
+        float n = distanceArray.Min();
+        int nearest = Array.IndexOf(distanceArray, n);
         nearestStatue = statueGroup.transform.GetChild(nearest);
+        #endregion
+
+        #region get statue on the far left or right
+        
+        //   right < point on Z-axis > left
+
+        //get value of z per statue
+        float getZ0 = statue0.transform.position.z;
+        float getZ1 = statue1.transform.position.z;
+        float getZ2 = statue2.transform.position.z;
+        float getZ3 = statue3.transform.position.z;
+        float getZ4 = statue4.transform.position.z;
+
+        float[] zAxisArray = new float[] { getZ0, getZ1, getZ2, getZ3, getZ4 };
+
+        // Finding maximum
+        float p = zAxisArray.Max();
+        int highestZ = Array.IndexOf(zAxisArray, p);
+        leftStatue = statueGroup.transform.GetChild(highestZ);
+
+        //Finding minimum
+        float q = zAxisArray.Min();
+        int lowestZ = Array.IndexOf(zAxisArray, q);
+        rightStatue = statueGroup.transform.GetChild(lowestZ);
+        #endregion
     }
 
 }
