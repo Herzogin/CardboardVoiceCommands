@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Android;
+using UnityEngine.SceneManagement;
 
 public class WalkWithVoice : MonoBehaviour
 {
@@ -65,6 +66,10 @@ public class WalkWithVoice : MonoBehaviour
         else if (result.Equals("slow"))
         {
             speed -= 1.0f;
+        }
+        else if (result.Equals("blue"))
+        {
+            SceneManager.LoadScene("Museum");
         }
     }
 

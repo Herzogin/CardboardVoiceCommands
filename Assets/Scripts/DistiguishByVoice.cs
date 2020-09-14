@@ -147,25 +147,25 @@ public class DistiguishByVoice : MonoBehaviour
 
         #region get statue on the far left or right
         
-        //   right < point on Z-axis > left
+        //   right < point on X-axis > left
 
-        //get value of z per statue
-        float getZ0 = statue0.transform.position.z;
-        float getZ1 = statue1.transform.position.z;
-        float getZ2 = statue2.transform.position.z;
-        float getZ3 = statue3.transform.position.z;
-        float getZ4 = statue4.transform.position.z;
+        //get value of x per statue
+        float getX0 = statue0.transform.position.x;
+        float getX1 = statue1.transform.position.x;
+        float getX2 = statue2.transform.position.x;
+        float getX3 = statue3.transform.position.x;
+        float getX4 = statue4.transform.position.x;
 
-        float[] zAxisArray = new float[] { getZ0, getZ1, getZ2, getZ3, getZ4 };
+        float[] xAxisArray = new float[] { getX0, getX1, getX2, getX3, getX4 };
 
         // Finding maximum
-        float p = zAxisArray.Max();
-        int highestZ = Array.IndexOf(zAxisArray, p);
+        float p = xAxisArray.Max();
+        int highestZ = Array.IndexOf(xAxisArray, p);
         leftStatue = statueGroup.transform.GetChild(highestZ);
 
         //Finding minimum
-        float q = zAxisArray.Min();
-        int lowestZ = Array.IndexOf(zAxisArray, q);
+        float q = xAxisArray.Min();
+        int lowestZ = Array.IndexOf(xAxisArray, q);
         rightStatue = statueGroup.transform.GetChild(lowestZ);
         #endregion
     }
