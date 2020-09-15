@@ -1,41 +1,42 @@
 ﻿using TextSpeech;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Android;
-using UnityEngine.SceneManagement;
+using System;
 
 public class WalkWithVoice : MonoBehaviour
 {
     public Transform cameraTransform;
-    public float toggleAngle = 10.0F;
     public float speed = 3.0F;
-    public bool moveForward = false;
+    public bool moveForward = true;
     const string LANG_CODE = "en-US";
     private CharacterController characterController;
+    public GameObject blueTarget;
+    public GameObject redTarget;
+    Vector3 target;
+    
 
     void Start()
     {
-
-
-        SetupLanguage(LANG_CODE);
+         SetupLanguage(LANG_CODE);
         SpeechToText.instance.onResultCallback = OnFinalSpeechResult;
         CheckMicPermission();
         characterController = GetComponent<CharacterController>();
-        cameraTransform = Camera.main.transform;
-        
     }
 
     void Update()
     {
-        
         SpeechToText.instance.onResultCallback = OnFinalSpeechResult;
         StartListening();
         
         if (moveForward)
         {
-            // Find the forward direction
-            Vector3 forward = cameraTransform.TransformDirection(Vector3.forward);
-            characterController.SimpleMove(forward * speed * toggleAngle / 5);
+            characterController.SimpleMove(target * speed);
+
+            Vector3 playerPosition = transform.position;
+            if (Math.Abs(playerPosition.x) > Math.Abs(target.x)-10)
+            {
+                moveForward = false;
+            }
         }
     }
 
@@ -51,13 +52,20 @@ public class WalkWithVoice : MonoBehaviour
 
     void OnFinalSpeechResult(string result)
     {
-        if (result.Equals("stop"))
+        if (result.Equals("blue"))
+        {
+            target = blueTarget.transform.position;
+            moveForward = true;
+        }
+        else if (result.Equals("red"))
+        {
+            target = redTarget.transform.position;
+            moveForward = true;
+            
+        }
+        else if (result.Equals("stop"))
         {
             moveForward = false;
-        }
-        else if (result.Equals("go"))
-        {
-            moveForward = true;
         }
         else if (result.Equals("fast"))
         {
@@ -66,11 +74,7 @@ public class WalkWithVoice : MonoBehaviour
         else if (result.Equals("slow"))
         {
             speed -= 1.0f;
-        }
-        else if (result.Equals("blue"))
-        {
-            SceneManager.LoadScene("Museum");
-        }
+        }     
     }
 
     void CheckMicPermission()

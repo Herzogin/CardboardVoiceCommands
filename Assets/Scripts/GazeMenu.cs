@@ -69,9 +69,14 @@ public class GazeMenu : MonoBehaviour
 
 	void switchScene(int sceneNumber)
 	{
-		if (sceneNumber == 1)
+		if (sceneNumber == 0)
 		{
 			SceneManager.LoadScene("Home");
+		}
+		else if (sceneNumber == 1)
+		{
+			SceneManager.LoadScene("1Positioning");
+
 		}
 		else if (sceneNumber == 2)
 		{

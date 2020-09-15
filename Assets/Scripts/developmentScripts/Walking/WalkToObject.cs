@@ -41,7 +41,7 @@ public class WalkToObject : MonoBehaviour
         trigger.triggers.Add(enterEntry);
         trigger.triggers.Add(exitEntry);
 
-        
+        characterController = GetComponent<CharacterController>();
     }
 
     void Update()
@@ -55,12 +55,15 @@ public class WalkToObject : MonoBehaviour
 
     void OnFinalSpeechResult(string result)
     {
-        if (result.Equals("go"))
+        if (result.Equals("blue"))
         {
-            characterController = GetComponent<CharacterController>();
-            cameraTransform = Camera.main.transform;
-            //Vector3 forward = cameraTransform.TransformDirection(Vector3.forward);
-            Vector3 target = targetGameObject.transform.localPosition;
+            //Vector3 newScale = transform.localScale;
+            //newScale *= 1.5f;
+            //targetGameObject.transform.localScale = newScale;
+
+
+            //Vector3 target = targetGameObject.transform.localPosition;
+            Vector3 target = new Vector3(-16.0f, 2.0f, 15.0f);
             characterController.SimpleMove(target * speed);
         }
         else if (Equals(result, "You go there"))
