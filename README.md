@@ -4,41 +4,41 @@ Available voice commands sorted by scene and script:
 
 ---1_Positioning---
 
-MoveObjectWithVoice.cs
-"right"
+MoveObjectWithVoice.cs:
+"right",
 "left"	
 
 
 ---2_ObjectIdentification---
 
-GoThere.cs
-"right"
+GoThere.cs:
+"right",
 "left"
 
-WalkWithVoice.cs
-"blue"
-"red"
-"stop"
-"fast"
+WalkWithVoice.cs:
+"blue",
+"red",
+"stop",
+"fast",
 "slow"
 
 
 ---3_InformationMapping---
 
-LabelMe.cs
+LabelMe.cs:
 "That is ..."
 
 
 ---4_Disambiguation---
 
-DistiguishByVoice.cs
-"far"
-"near"
-"right"
-"left"
+DistiguishByVoice.cs:
+"far",
+"near",
+"right",
+"left",
 "delete" (deletes every Statue)
 
-VoiceAndGazeControl.cs
-"down"
-"big"
+VoiceAndGazeControl.cs:
+"down",
+"big",
 "small"
