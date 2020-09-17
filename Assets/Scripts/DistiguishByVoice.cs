@@ -161,12 +161,12 @@ public class DistiguishByVoice : MonoBehaviour
         // Finding maximum
         float p = xAxisArray.Max();
         int highestZ = Array.IndexOf(xAxisArray, p);
-        leftStatue = statueGroup.transform.GetChild(highestZ);
+        rightStatue = statueGroup.transform.GetChild(highestZ);
 
         //Finding minimum
         float q = xAxisArray.Min();
         int lowestZ = Array.IndexOf(xAxisArray, q);
-        rightStatue = statueGroup.transform.GetChild(lowestZ);
+        leftStatue = statueGroup.transform.GetChild(lowestZ);
         #endregion
     }
 

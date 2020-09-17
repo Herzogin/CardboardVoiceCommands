@@ -9,8 +9,6 @@ public class LabelMe : MonoBehaviour
 {
     [SerializeField]
     Text uiText;
-    //[SerializeField]
-    //Text uiText2;
     bool gazedAt = false;
     const string LANG_CODE = "en-US";
 

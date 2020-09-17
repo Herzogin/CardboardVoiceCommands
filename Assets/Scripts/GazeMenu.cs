@@ -89,7 +89,7 @@ public class GazeMenu : MonoBehaviour
 		}
 		else if (sceneNumber == 4)
 		{
-			SceneManager.LoadScene("4Exhibition");
+			SceneManager.LoadScene("4Disambiguation");
 			
 		}
 	}
