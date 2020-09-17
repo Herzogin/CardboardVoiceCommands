@@ -71,25 +71,25 @@ public class GazeMenu : MonoBehaviour
 	{
 		if (sceneNumber == 0)
 		{
-			SceneManager.LoadScene("Home");
+			SceneManager.LoadScene("0_Home");
 		}
 		else if (sceneNumber == 1)
 		{
-			SceneManager.LoadScene("1Positioning");
+			SceneManager.LoadScene("1_Positioning");
 
 		}
 		else if (sceneNumber == 2)
 		{
-			SceneManager.LoadScene("2ObjectIdentification");
+			SceneManager.LoadScene("2_ObjectIdentification");
 			
 		}
 		else if (sceneNumber == 3)
 		{
-			
+			SceneManager.LoadScene("3_InformationMapping");
 		}
 		else if (sceneNumber == 4)
 		{
-			SceneManager.LoadScene("4Disambiguation");
+			SceneManager.LoadScene("4_Disambiguation");
 			
 		}
 	}
