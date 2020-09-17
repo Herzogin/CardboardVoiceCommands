@@ -55,7 +55,6 @@ public class VoiceAndGazeControl : MonoBehaviour
         else if (Equals(result, "big"))
         {
             Vector3 newScale = transform.localScale;
-            //newScale *= 1.2f;
             newScale *= 1.5f;
             affectedGameObject.transform.localScale = newScale;
 
