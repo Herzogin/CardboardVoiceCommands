@@ -80,7 +80,7 @@ public class GazeMenu : MonoBehaviour
 		}
 		else if (sceneNumber == 2)
 		{
-			SceneManager.LoadScene("2FloatingSpheres");
+			SceneManager.LoadScene("2ObjectIdentification");
 			
 		}
 		else if (sceneNumber == 3)

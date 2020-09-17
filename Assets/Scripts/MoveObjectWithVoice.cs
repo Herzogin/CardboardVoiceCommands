@@ -4,7 +4,7 @@ using TextSpeech;
 using UnityEngine.Android;
 
 [RequireComponent(typeof(EventTrigger))]
-[RequireComponent(typeof(Rigidbody))]
+//[RequireComponent(typeof(Rigidbody))]
 public class MoveObjectWithVoice : MonoBehaviour
 {
     bool gazedAt = false;
