@@ -16,18 +16,14 @@ Move the player to blue or red Cube. Look at one of the cubes and say:
 "slow"
 (WalkWithVoice.cs)
 
+
+
 ---2_ObjectIdentification---
 
 Make the sphere go to blue or red cube. Look at one of the cubes and say:
 "go"
 (GoThere.cs)
 
-WalkWithVoice.cs:
-"blue",
-"red",
-"stop",
-"fast",
-"slow"
 
 
 ---3_InformationMapping---
@@ -35,6 +31,8 @@ WalkWithVoice.cs:
 Label the paintings. Look at the sign under the painting and say:
 "That is ..."
 (LabelMe.cs)
+
+
 
 ---4_Disambiguation---
 
