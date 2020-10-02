@@ -53,6 +53,7 @@ public class DistiguishByVoice : MonoBehaviour
         }
     }
 
+    
     void OnFinalSpeechResult(string result)
     {   uiText.text = result;
         if (result.Equals("far"))

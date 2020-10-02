@@ -45,6 +45,7 @@ public class LabelMe : MonoBehaviour
 
     void OnFinalSpeechResult(string result)
     {
+        //separates the first two words
         string[] words = result.Split(' ');
         string keywords = words.GetValue(0).ToString()+" "+ words.GetValue(1).ToString();
         Array.Clear(words, 0, 2);
